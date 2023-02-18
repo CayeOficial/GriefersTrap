@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Logs file
+*.txt
+
+# Local hosted .zip
+*.zip
+
+# Local ipset setup info file
+.ipset

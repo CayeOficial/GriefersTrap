@@ -1,0 +1,37 @@
+server:
+  online-mode: false
+  host: "0.0.0.0"
+  port: "25565"
+  version: "1.16.5"
+  motd: "§aOfficial survival server! Join now, all ports open!"
+  maxPlayers: 100
+  enforceSecureProfile: false # +1.19 only
+
+# List of ips that won't get banned
+# Do not whitelist 127.0.0.1, 0.0.0.0 or your machine's public ip because it can be spooffed
+whitelist:
+  - "192.168.18.50"
+
+warnings:
+  # Delay between sending messages
+  delay: 3 # In seconds
+  messages:
+  # The messages sent to player
+  # It has an announcement message format (like running /say)
+  # The message will be "[owner] message"
+  # - owner: "a message owner"
+  #   message: "the message that will be sent"
+  # Use § instead of & for color codes.
+    - owner: "YourServer"
+      message: "§aHello there!"
+    - owner: "YourServer"
+      message: "§aI'm grateful that your §lport-scanning tool worked!§a You got it!"
+    - owner: "YourServer"
+      message: "§aLet's party!! §o* music turns on *"
+    - owner: "YourServer"
+      message: "§cWait, what? Something is wrong here. Looks that you've been trolled and your ip is now blocked from this entire system, well let's keep the party running until your connection times out."
+
+webhook:
+  enabled: true
+  url: "https://discord.com/api/webhooks/ID/TOKEN"
+  message: {"embed":{"color":15879747,"title":"Someone just joined the fake server","fields":[{"name":"IP Address:","value":"%ip%","inline":true},{"name":"Username:","value":"%username%","inline":true},{"name":"IP Whitelisted?","value":"%whitelist%","inline":true}],"thumbnail":{"url":"https://minotar.net/armor/bust/%username%"}}}
