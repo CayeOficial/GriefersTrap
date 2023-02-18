@@ -1,14 +1,24 @@
+# Fake server configuration
 server:
+# Should offline (cracked) users be able to join?
   online-mode: false
+# IP and port that the server will listen on
+# Since you must run this on a public ip, you might want to rate-limit the access to the port
+# For example with ufw you can do "ufw limit port/tcp", or either setup a low-layer firewall
   host: "0.0.0.0"
   port: "25565"
-  version: "1.16.5"
+# Version of the server, can be any from 1.7 to 1.19.3. I suggest you to use 1.8.8 since most of the clients that griefers use are 1.8.8
+  version: "1.8.8"
+# Motd of the server
+# Use § instead of & for color codes
+# You can go to the second line using "\n"
   motd: "§aOfficial survival server! Join now, all ports open!"
   maxPlayers: 100
   enforceSecureProfile: false # +1.19 only
 
 # List of ips that won't get banned
-# Do not whitelist 127.0.0.1, 0.0.0.0 or your machine's public ip because it can be spooffed
+# Do not whitelist the machine public ip nor any other because they might be spooffed, try to keep the whitelist empty as much as you can
+# Leave it as an empty array to disable: "whitelist: []"
 whitelist:
   - "192.168.18.50"
 
@@ -22,16 +32,27 @@ warnings:
   # - owner: "a message owner"
   #   message: "the message that will be sent"
   # Use § instead of & for color codes.
+  # You can add as many as you want, if you don't want to send messages (so bored :c) make it an empty array "messages: []"
     - owner: "YourServer"
       message: "§aHello there!"
     - owner: "YourServer"
       message: "§aI'm grateful that your §lport-scanning tool worked!§a You got it!"
     - owner: "YourServer"
-      message: "§aLet's party!! §o* music turns on *"
+      message: "§aLet's party!! §o* turns music on *"
     - owner: "YourServer"
       message: "§cWait, what? Something is wrong here. Looks that you've been trolled and your ip is now blocked from this entire system, well let's keep the party running until your connection times out."
 
+# Send join alerts to discord using a webhook
+# Follow this guide to know how to create a webhook https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
 webhook:
+# Should the app send discord alerts when someone joins?
   enabled: true
+# The URL of the webhook previusly created
   url: "https://discord.com/api/webhooks/ID/TOKEN"
+# Embed that will be sent
+# You can use https://embeds.cayeoficial.com to generate embeds
+# Placeholders:
+#  - %username% -> The username of the user who joined
+#  - %ip% -> IP address that the user used to join
+#  - %whitelist% -> returns true if the ip is whitelisted, otherwise returns false
   message: {"embed":{"color":15879747,"title":"Someone just joined the fake server","fields":[{"name":"IP Address:","value":"%ip%","inline":true},{"name":"Username:","value":"%username%","inline":true},{"name":"IP Whitelisted?","value":"%whitelist%","inline":true}],"thumbnail":{"url":"https://minotar.net/armor/bust/%username%"}}}
