@@ -10,11 +10,12 @@ This tool is **fully made on Node.JS (javascript)**, so the fake-server won't ev
 ![RAM Usage Linux](https://images-ext-2.discordapp.net/external/K0NYfenGFPD2FXx8Be_0XkNFGabrkB67K_n8gZlWyK0/https/cdn.cayeoficial.com/image//Termius_UhoZYXdYoB.png)
 
 ❗ This is not a security-related app (not at all) and shouldn't be used to prevent griefs.
+
 🖥 **Support:** zCayeOficial#0001
 
 ### ❓ - How it works?
 
-The app will generate a fake-n-empty server with full access to the Minecraft protocol, and when a player joins, it will send him some messages and then add his IP Address to a ipset set and will be blocked from accessing any port on the server.
+The app will generate a fake-n-empty server with full access to the Minecraft protocol, and when a player joins, it will send him some messages and then add his IP Address to an ipset set and will be blocked from accessing any port on the server.
 
 ### 📸 - Demo
 
@@ -24,7 +25,7 @@ The app will generate a fake-n-empty server with full access to the Minecraft pr
 
 # 🔨 - Requirements
 - A dedicated server or VPS with root access
-- Node.J v17 or higher
+- Node.JS v17 or higher
 - ipset and iptables installed on the system
 
 # 🛠 - Installation
@@ -46,7 +47,7 @@ git clone https://github.com/CayeOficial/GriefersTrap
 ```bash
 npm install
 ```
-5. Edit `config.yml` to your liking and run the app using `node index.js`, if you want to see the output of the executed commands by the app, add the flag `--debug` at the end of the startup command.
+5. Edit `config.yml` to your liking and run the app using `node index.js`, if you want to see the output of the commands executed by the app, add the flag `--debug` at the end of the startup command.
 
 💡 **TIP:** If you want your app to restart if it crashes, you can use PM2 (Process Manager 2) for that.
 ```bash
@@ -74,6 +75,7 @@ If you application doesn't block connections, check the following steps:
 - Is ipset/iptables installed and/or enabled? Run `ipset` and `iptables`, if some (or both) of them returns "command not found" you should turn arround and re-read the installation guide.
 - Did the app throw any error? Try adding the `--debug` flag at the end of the startup command to check for errors.
 - The app will try to setup iptables/ipset once, to make a fresh setup, scroll down to the "Removing restrictions" category of this page and delete the `.ipset` file.
+- If nothing of that works, contact me through discord or open an issue. I'll try to help :)
 
 # 🔐 - Removing restrictions
 
