@@ -4,6 +4,11 @@ Creates a fake minecraft server and blocks IP addresses from users that joins in
 
 Has your server ever been griefed or are you afraid of it? Well, with this simple, secure, performant and efficient tool you can troll people that is doing a port-scanning to your server IP.
 
+This tool is **fully made on Node.JS (javascript)**, so the fake-server won't even reach 50MB of RAM consumption, I guarantee a very good performance, it isn't similar in any way to a default PaperMC 1.19 server consumption.
+
+![RAM Usage Windows](https://images-ext-2.discordapp.net/external/Wm-zD7acWx5xJpwMvuim2FZBvTA9AVTmVZ_r5R64yww/https/cdn.cayeoficial.com/image//Taskmgr_VhIFnSpe53.png)
+![RAM Usage Linux](https://images-ext-2.discordapp.net/external/K0NYfenGFPD2FXx8Be_0XkNFGabrkB67K_n8gZlWyK0/https/cdn.cayeoficial.com/image//Termius_UhoZYXdYoB.png)
+
 ❗ This is not a security-related app (not at all) and shouldn't be used to prevent griefs.
 🖥 **Support:** zCayeOficial#0001
 
@@ -14,7 +19,8 @@ The app will generate a fake-n-empty server with full access to the Minecraft pr
 ### 📸 - Demo
 
 [![Demo](https://img.youtube.com/vi/b-CgRFdxeus/0.jpg)](https://www.youtube.com/watch?v=b-CgRFdxeus)
-[![Demo](https://images-ext-2.discordapp.net/external/XMSVZqVHaFV3kwlYNyACpz-Pkljvldzj9rkhqYIofZk/https/cdn.cayeoficial.com/image/Discord_CXekF8LOhd.png)]
+
+![Demo](https://images-ext-2.discordapp.net/external/XMSVZqVHaFV3kwlYNyACpz-Pkljvldzj9rkhqYIofZk/https/cdn.cayeoficial.com/image/Discord_CXekF8LOhd.png)
 
 # 🔨 - Requirements
 - A dedicated server or VPS with root access
