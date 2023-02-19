@@ -4,7 +4,7 @@ const { error } = require('../logs');
 async function executeCommand(command) {
     exec(command, (err, stdout, stderr) => {
         if (err) {
-            error("An error has ocurred while running a shell command. Did you ran the application with sudo? Stacktrace:")
+            error("An error has occurred while running a shell command. Did you ran the application with sudo? Stacktrace:")
             console.error(err)
         }
 
